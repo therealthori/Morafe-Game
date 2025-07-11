@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (this.gameObject.transform.position.x < rightLimit)
             {
-                transform.Translate(Vector3.right * Time.deltaTime * horizontalSpeed * -1);
+                transform.Translate(Vector3.left * Time.deltaTime * horizontalSpeed * -1);
             }
         }
     }
