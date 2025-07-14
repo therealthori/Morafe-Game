@@ -17,6 +17,12 @@ public class SceneControl : MonoBehaviour
 
     public void StartGame()
     {
+        StartCoroutine(StartButton());
+    }
+
+    IEnumerator StartButton()
+    {
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(1);
     }
 }

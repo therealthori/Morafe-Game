@@ -570,6 +570,7 @@ GameObject:
   - component: {fileID: 223581103}
   - component: {fileID: 223581102}
   - component: {fileID: 223581106}
+  - component: {fileID: 223581107}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -666,6 +667,7 @@ Transform:
   - {fileID: 963194228}
   - {fileID: 910342116}
   - {fileID: 1060352857}
+  - {fileID: 838270400}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &223581106
@@ -684,6 +686,38 @@ MonoBehaviour:
   horizontalSpeed: 3
   rightLimit: 5.5
   leftLimit: -5.5
+  jumpForce: 6
+  groundCheckDist: 0.15
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!54 &223581107
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223581101}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &223630246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1242,7 +1276,6 @@ MonoBehaviour:
   player: {fileID: 223581101}
   playerAnim: {fileID: 910342117}
   collisionFX: {fileID: 1383803493}
-  mainCam: {fileID: 963194225}
   fadeOut: {fileID: 1573089658}
 --- !u!4 &383283372 stripped
 Transform:
@@ -1533,7 +1566,6 @@ MonoBehaviour:
   player: {fileID: 223581101}
   playerAnim: {fileID: 910342117}
   collisionFX: {fileID: 1383803493}
-  mainCam: {fileID: 963194225}
   fadeOut: {fileID: 1573089658}
 --- !u!4 &447757654 stripped
 Transform:
@@ -1797,7 +1829,6 @@ MonoBehaviour:
   player: {fileID: 223581101}
   playerAnim: {fileID: 910342117}
   collisionFX: {fileID: 1383803493}
-  mainCam: {fileID: 963194225}
   fadeOut: {fileID: 1573089658}
 --- !u!1001 &519638698
 PrefabInstance:
@@ -2553,7 +2584,6 @@ MonoBehaviour:
   player: {fileID: 223581101}
   playerAnim: {fileID: 910342117}
   collisionFX: {fileID: 1383803493}
-  mainCam: {fileID: 963194225}
   fadeOut: {fileID: 1573089658}
 --- !u!1 &705507993
 GameObject:
@@ -2771,7 +2801,6 @@ MonoBehaviour:
   player: {fileID: 223581101}
   playerAnim: {fileID: 910342117}
   collisionFX: {fileID: 1383803493}
-  mainCam: {fileID: 963194225}
   fadeOut: {fileID: 1573089658}
 --- !u!4 &716626039 stripped
 Transform:
@@ -2961,7 +2990,6 @@ MonoBehaviour:
   player: {fileID: 223581101}
   playerAnim: {fileID: 910342117}
   collisionFX: {fileID: 1383803493}
-  mainCam: {fileID: 963194225}
   fadeOut: {fileID: 1573089658}
 --- !u!1 &765365876
 GameObject:
@@ -3275,7 +3303,6 @@ MonoBehaviour:
   player: {fileID: 223581101}
   playerAnim: {fileID: 910342117}
   collisionFX: {fileID: 1383803493}
-  mainCam: {fileID: 963194225}
   fadeOut: {fileID: 1573089658}
 --- !u!1 &799141462
 GameObject:
@@ -3399,7 +3426,6 @@ MonoBehaviour:
   player: {fileID: 223581101}
   playerAnim: {fileID: 910342117}
   collisionFX: {fileID: 1383803493}
-  mainCam: {fileID: 963194225}
   fadeOut: {fileID: 1573089658}
 --- !u!1001 &801467556
 PrefabInstance:
@@ -3479,6 +3505,139 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4244113901689226, guid: 836ca07fc69b4184ca14265c7d24030d, type: 3}
   m_PrefabInstance: {fileID: 2119592287}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &838270399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 838270400}
+  - component: {fileID: 838270404}
+  - component: {fileID: 838270403}
+  - component: {fileID: 838270402}
+  - component: {fileID: 838270401}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &838270400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838270399}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.92, z: 0}
+  m_LocalScale: {x: 0.7774793, y: 0.0797, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 223581105}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &838270401
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838270399}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &838270402
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838270399}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &838270403
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838270399}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &838270404
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838270399}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &844428888
 GameObject:
   m_ObjectHideFlags: 0
@@ -3491,7 +3650,7 @@ GameObject:
   - component: {fileID: 844428892}
   - component: {fileID: 844428891}
   - component: {fileID: 844428890}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3507,8 +3666,8 @@ Transform:
   m_GameObject: {fileID: 844428888}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 13.7, y: 1, z: 42.36}
+  m_LocalPosition: {x: 0, y: 0, z: 2.68}
+  m_LocalScale: {x: 13.7, y: 1, z: 50.85742}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1238251218}
@@ -3711,7 +3870,6 @@ MonoBehaviour:
   player: {fileID: 223581101}
   playerAnim: {fileID: 910342117}
   collisionFX: {fileID: 1383803493}
-  mainCam: {fileID: 963194225}
   fadeOut: {fileID: 1573089658}
 --- !u!1 &908917344
 GameObject:
@@ -4039,7 +4197,6 @@ MonoBehaviour:
   player: {fileID: 223581101}
   playerAnim: {fileID: 910342117}
   collisionFX: {fileID: 1383803493}
-  mainCam: {fileID: 963194225}
   fadeOut: {fileID: 1573089658}
 --- !u!1001 &920957831
 PrefabInstance:
@@ -4464,7 +4621,6 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4546,27 +4702,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 223581105}
   m_LocalEulerAnglesHint: {x: 22.79, y: 0, z: 0}
---- !u!95 &963194229
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 49c87d8c166544b41af26c6c42dedf4f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &977193291
 GameObject:
   m_ObjectHideFlags: 0
@@ -4689,7 +4824,6 @@ MonoBehaviour:
   player: {fileID: 223581101}
   playerAnim: {fileID: 910342117}
   collisionFX: {fileID: 1383803493}
-  mainCam: {fileID: 963194225}
   fadeOut: {fileID: 1573089658}
 --- !u!4 &996048902 stripped
 Transform:
@@ -5116,7 +5250,7 @@ GameObject:
   - component: {fileID: 1089575271}
   - component: {fileID: 1089575270}
   - component: {fileID: 1089575269}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5571,7 +5705,6 @@ MonoBehaviour:
   player: {fileID: 223581101}
   playerAnim: {fileID: 910342117}
   collisionFX: {fileID: 1383803493}
-  mainCam: {fileID: 963194225}
   fadeOut: {fileID: 1573089658}
 --- !u!4 &1202938470 stripped
 Transform:
@@ -5764,7 +5897,6 @@ MonoBehaviour:
   player: {fileID: 223581101}
   playerAnim: {fileID: 910342117}
   collisionFX: {fileID: 0}
-  mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
 --- !u!1 &1238251217
 GameObject:
@@ -5945,7 +6077,6 @@ MonoBehaviour:
   player: {fileID: 223581101}
   playerAnim: {fileID: 910342117}
   collisionFX: {fileID: 1383803493}
-  mainCam: {fileID: 963194225}
   fadeOut: {fileID: 1573089658}
 --- !u!1001 &1331014672
 PrefabInstance:
@@ -6810,7 +6941,6 @@ MonoBehaviour:
   player: {fileID: 223581101}
   playerAnim: {fileID: 910342117}
   collisionFX: {fileID: 1383803493}
-  mainCam: {fileID: 963194225}
   fadeOut: {fileID: 1573089658}
 --- !u!1001 &1505734562
 PrefabInstance:
@@ -7302,7 +7432,6 @@ MonoBehaviour:
   player: {fileID: 223581101}
   playerAnim: {fileID: 910342117}
   collisionFX: {fileID: 1383803493}
-  mainCam: {fileID: 963194225}
   fadeOut: {fileID: 1573089658}
 --- !u!1001 &1560611389
 PrefabInstance:
@@ -7624,7 +7753,6 @@ MonoBehaviour:
   player: {fileID: 223581101}
   playerAnim: {fileID: 910342117}
   collisionFX: {fileID: 1383803493}
-  mainCam: {fileID: 963194225}
   fadeOut: {fileID: 1573089658}
 --- !u!1 &1573089658
 GameObject:
@@ -7732,7 +7860,7 @@ GameObject:
   - component: {fileID: 1584164738}
   - component: {fileID: 1584164737}
   - component: {fileID: 1584164736}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7819,8 +7947,8 @@ Transform:
   m_GameObject: {fileID: 1584164735}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 13.7, y: 1, z: 42.36}
+  m_LocalPosition: {x: 0, y: 0, z: 3.84}
+  m_LocalScale: {x: 13.7, y: 1, z: 50.85742}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1855024311}
@@ -8720,7 +8848,6 @@ MonoBehaviour:
   player: {fileID: 223581101}
   playerAnim: {fileID: 910342117}
   collisionFX: {fileID: 1383803493}
-  mainCam: {fileID: 963194225}
   fadeOut: {fileID: 1573089658}
 --- !u!4 &1769854719 stripped
 Transform:
@@ -9661,7 +9788,7 @@ GameObject:
   - component: {fileID: 2010646680}
   - component: {fileID: 2010646679}
   - component: {fileID: 2010646678}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9677,8 +9804,8 @@ Transform:
   m_GameObject: {fileID: 2010646676}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 13.7, y: 1, z: 42.36}
+  m_LocalPosition: {x: 0, y: 0, z: 3.55}
+  m_LocalScale: {x: 13.7, y: 1, z: 50.85742}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 908917345}
@@ -10127,7 +10254,6 @@ MonoBehaviour:
   player: {fileID: 223581101}
   playerAnim: {fileID: 910342117}
   collisionFX: {fileID: 1383803493}
-  mainCam: {fileID: 963194225}
   fadeOut: {fileID: 1573089658}
 --- !u!4 &2075638388 stripped
 Transform:
