@@ -301,7 +301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4345878849055200, guid: fa6105287f77b1240a0017f7d23434c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.2900002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4345878849055200, guid: fa6105287f77b1240a0017f7d23434c2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -309,7 +309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4345878849055200, guid: fa6105287f77b1240a0017f7d23434c2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4345878849055200, guid: fa6105287f77b1240a0017f7d23434c2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -710,7 +710,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4345878849055200, guid: fa6105287f77b1240a0017f7d23434c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.2900002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4345878849055200, guid: fa6105287f77b1240a0017f7d23434c2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -718,7 +718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4345878849055200, guid: fa6105287f77b1240a0017f7d23434c2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4345878849055200, guid: fa6105287f77b1240a0017f7d23434c2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1037,6 +1037,7 @@ RectTransform:
   m_Children:
   - {fileID: 1343724267}
   - {fileID: 1847653628}
+  - {fileID: 1573089659}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1131,6 +1132,7 @@ GameObject:
   - component: {fileID: 373112691}
   - component: {fileID: 373112690}
   - component: {fileID: 373112689}
+  - component: {fileID: 373112693}
   m_Layer: 0
   m_Name: Tree01
   m_TagString: Untagged
@@ -1153,7 +1155,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1225,6 +1227,23 @@ Transform:
   - {fileID: 996048902}
   m_Father: {fileID: 1855024311}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &373112693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373112688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207d960e86645a84ab85cf70cfe8131b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 223581101}
+  playerAnim: {fileID: 910342117}
+  collisionFX: {fileID: 1383803493}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 1573089658}
 --- !u!4 &383283372 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4244113901689226, guid: 836ca07fc69b4184ca14265c7d24030d, type: 3}
@@ -1404,6 +1423,7 @@ GameObject:
   - component: {fileID: 444526083}
   - component: {fileID: 444526082}
   - component: {fileID: 444526081}
+  - component: {fileID: 444526084}
   m_Layer: 0
   m_Name: Rock01 (1)
   m_TagString: Untagged
@@ -1442,7 +1462,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1498,6 +1518,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444526079}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &444526084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444526079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207d960e86645a84ab85cf70cfe8131b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 223581101}
+  playerAnim: {fileID: 910342117}
+  collisionFX: {fileID: 1383803493}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 1573089658}
 --- !u!4 &447757654 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4777469181809006, guid: 2bd413b982191d54396bb381188bb4d0, type: 3}
@@ -1650,6 +1687,7 @@ GameObject:
   - component: {fileID: 515739441}
   - component: {fileID: 515739440}
   - component: {fileID: 515739439}
+  - component: {fileID: 515739443}
   m_Layer: 0
   m_Name: Tree03
   m_TagString: Untagged
@@ -1672,7 +1710,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1744,6 +1782,23 @@ Transform:
   - {fileID: 394075334}
   m_Father: {fileID: 1855024311}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &515739443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515739438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207d960e86645a84ab85cf70cfe8131b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 223581101}
+  playerAnim: {fileID: 910342117}
+  collisionFX: {fileID: 1383803493}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 1573089658}
 --- !u!1001 &519638698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1770,7 +1825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1778,7 +1833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1976,7 +2031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4905684144481780, guid: dc00aab85b301f242896a77c4b442ec0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.94
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4905684144481780, guid: dc00aab85b301f242896a77c4b442ec0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2388,6 +2443,7 @@ GameObject:
   - component: {fileID: 685397449}
   - component: {fileID: 685397448}
   - component: {fileID: 685397447}
+  - component: {fileID: 685397450}
   m_Layer: 0
   m_Name: Tree01
   m_TagString: Untagged
@@ -2426,7 +2482,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2482,6 +2538,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 685397445}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &685397450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685397445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207d960e86645a84ab85cf70cfe8131b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 223581101}
+  playerAnim: {fileID: 910342117}
+  collisionFX: {fileID: 1383803493}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 1573089658}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2588,6 +2661,7 @@ GameObject:
   - component: {fileID: 711704600}
   - component: {fileID: 711704599}
   - component: {fileID: 711704598}
+  - component: {fileID: 711704601}
   m_Layer: 0
   m_Name: Tree03
   m_TagString: Untagged
@@ -2604,7 +2678,7 @@ Transform:
   m_GameObject: {fileID: 711704596}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.87, y: 1.7289, z: 4.632308}
+  m_LocalPosition: {x: -3.44, y: 1.7289, z: -4.29}
   m_LocalScale: {x: 1, y: 2.4379, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2626,7 +2700,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2682,6 +2756,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 711704596}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &711704601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711704596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207d960e86645a84ab85cf70cfe8131b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 223581101}
+  playerAnim: {fileID: 910342117}
+  collisionFX: {fileID: 1383803493}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 1573089658}
 --- !u!4 &716626039 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4483830403358642, guid: 74442f407a24ac84f95f08a83b1bb617, type: 3}
@@ -2760,6 +2851,7 @@ GameObject:
   - component: {fileID: 754883972}
   - component: {fileID: 754883971}
   - component: {fileID: 754883970}
+  - component: {fileID: 754883973}
   m_Layer: 0
   m_Name: Tree01
   m_TagString: Untagged
@@ -2776,7 +2868,7 @@ Transform:
   m_GameObject: {fileID: 754883968}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.1686096, y: 1.67, z: 4.632308}
+  m_LocalPosition: {x: 3.44, y: 1.67, z: -7.03}
   m_LocalScale: {x: 1, y: 2.4379, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2798,7 +2890,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2854,6 +2946,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754883968}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &754883973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754883968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207d960e86645a84ab85cf70cfe8131b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 223581101}
+  playerAnim: {fileID: 910342117}
+  collisionFX: {fileID: 1383803493}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 1573089658}
 --- !u!1 &765365876
 GameObject:
   m_ObjectHideFlags: 0
@@ -3056,6 +3165,7 @@ GameObject:
   - component: {fileID: 783618040}
   - component: {fileID: 783618039}
   - component: {fileID: 783618038}
+  - component: {fileID: 783618041}
   m_Layer: 0
   m_Name: Tree03
   m_TagString: Untagged
@@ -3094,7 +3204,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3150,6 +3260,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783618036}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &783618041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783618036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207d960e86645a84ab85cf70cfe8131b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 223581101}
+  playerAnim: {fileID: 910342117}
+  collisionFX: {fileID: 1383803493}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 1573089658}
 --- !u!1 &799141462
 GameObject:
   m_ObjectHideFlags: 0
@@ -3162,6 +3289,7 @@ GameObject:
   - component: {fileID: 799141466}
   - component: {fileID: 799141465}
   - component: {fileID: 799141464}
+  - component: {fileID: 799141467}
   m_Layer: 0
   m_Name: Tree03
   m_TagString: Untagged
@@ -3200,7 +3328,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3256,6 +3384,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 799141462}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &799141467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799141462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207d960e86645a84ab85cf70cfe8131b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 223581101}
+  playerAnim: {fileID: 910342117}
+  collisionFX: {fileID: 1383803493}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 1573089658}
 --- !u!1001 &801467556
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3290,7 +3435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4905684144481780, guid: dc00aab85b301f242896a77c4b442ec0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.94
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4905684144481780, guid: dc00aab85b301f242896a77c4b442ec0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3456,6 +3601,7 @@ GameObject:
   - component: {fileID: 880466965}
   - component: {fileID: 880466964}
   - component: {fileID: 880466963}
+  - component: {fileID: 880466967}
   m_Layer: 0
   m_Name: Rock01
   m_TagString: Untagged
@@ -3478,7 +3624,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3550,6 +3696,23 @@ Transform:
   - {fileID: 1428075180}
   m_Father: {fileID: 1855024311}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &880466967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880466962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207d960e86645a84ab85cf70cfe8131b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 223581101}
+  playerAnim: {fileID: 910342117}
+  collisionFX: {fileID: 1383803493}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 1573089658}
 --- !u!1 &908917344
 GameObject:
   m_ObjectHideFlags: 0
@@ -3766,6 +3929,7 @@ GameObject:
   - component: {fileID: 918479023}
   - component: {fileID: 918479022}
   - component: {fileID: 918479021}
+  - component: {fileID: 918479024}
   m_Layer: 0
   m_Name: Rock01
   m_TagString: Untagged
@@ -3782,7 +3946,7 @@ Transform:
   m_GameObject: {fileID: 918479019}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.84, y: 0.76, z: 0.12}
+  m_LocalPosition: {x: 1.84, y: 0.76, z: 2.41}
   m_LocalScale: {x: 2, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3804,7 +3968,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3860,6 +4024,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918479019}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &918479024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918479019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207d960e86645a84ab85cf70cfe8131b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 223581101}
+  playerAnim: {fileID: 910342117}
+  collisionFX: {fileID: 1383803493}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 1573089658}
 --- !u!1001 &920957831
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4283,6 +4464,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4364,6 +4546,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 223581105}
   m_LocalEulerAnglesHint: {x: 22.79, y: 0, z: 0}
+--- !u!95 &963194229
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 49c87d8c166544b41af26c6c42dedf4f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &977193291
 GameObject:
   m_ObjectHideFlags: 0
@@ -4376,6 +4579,7 @@ GameObject:
   - component: {fileID: 977193295}
   - component: {fileID: 977193294}
   - component: {fileID: 977193293}
+  - component: {fileID: 977193296}
   m_Layer: 0
   m_Name: Tree02
   m_TagString: Untagged
@@ -4414,7 +4618,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4470,6 +4674,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977193291}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &977193296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977193291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207d960e86645a84ab85cf70cfe8131b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 223581101}
+  playerAnim: {fileID: 910342117}
+  collisionFX: {fileID: 1383803493}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 1573089658}
 --- !u!4 &996048902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
@@ -4774,7 +4995,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4483830403358642, guid: 74442f407a24ac84f95f08a83b1bb617, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.51
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4483830403358642, guid: 74442f407a24ac84f95f08a83b1bb617, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5181,7 +5402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5189,7 +5410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5240,6 +5461,7 @@ GameObject:
   - component: {fileID: 1202677194}
   - component: {fileID: 1202677193}
   - component: {fileID: 1202677192}
+  - component: {fileID: 1202677195}
   m_Layer: 0
   m_Name: Tree01
   m_TagString: Untagged
@@ -5278,7 +5500,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -5334,6 +5556,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202677190}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1202677195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202677190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207d960e86645a84ab85cf70cfe8131b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 223581101}
+  playerAnim: {fileID: 910342117}
+  collisionFX: {fileID: 1383803493}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 1573089658}
 --- !u!4 &1202938470 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4777469181809006, guid: 2bd413b982191d54396bb381188bb4d0, type: 3}
@@ -5416,6 +5655,7 @@ GameObject:
   - component: {fileID: 1226838428}
   - component: {fileID: 1226838427}
   - component: {fileID: 1226838426}
+  - component: {fileID: 1226838429}
   m_Layer: 0
   m_Name: Crate
   m_TagString: Untagged
@@ -5453,7 +5693,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -5509,6 +5749,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226838424}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1226838429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226838424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207d960e86645a84ab85cf70cfe8131b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 223581101}
+  playerAnim: {fileID: 910342117}
+  collisionFX: {fileID: 0}
+  mainCam: {fileID: 0}
+  fadeOut: {fileID: 0}
 --- !u!1 &1238251217
 GameObject:
   m_ObjectHideFlags: 0
@@ -5578,6 +5835,7 @@ GameObject:
   - component: {fileID: 1324354015}
   - component: {fileID: 1324354014}
   - component: {fileID: 1324354013}
+  - component: {fileID: 1324354017}
   m_Layer: 0
   m_Name: Tree02
   m_TagString: Untagged
@@ -5600,7 +5858,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -5672,6 +5930,23 @@ Transform:
   - {fileID: 2075638388}
   m_Father: {fileID: 1855024311}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1324354017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324354012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207d960e86645a84ab85cf70cfe8131b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 223581101}
+  playerAnim: {fileID: 910342117}
+  collisionFX: {fileID: 1383803493}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 1573089658}
 --- !u!1001 &1331014672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6005,6 +6280,134 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41e722f5443cbd048b675375e24f1beb, type: 3}
+--- !u!1 &1383803491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1383803492}
+  - component: {fileID: 1383803493}
+  m_Layer: 0
+  m_Name: Collision
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1383803492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383803491}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1892029229}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1383803493
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383803491}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &1394811182 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4137486168269956, guid: da41fd2967a439d409358c2214a5409e, type: 3}
@@ -6297,6 +6700,7 @@ GameObject:
   - component: {fileID: 1496309611}
   - component: {fileID: 1496309610}
   - component: {fileID: 1496309609}
+  - component: {fileID: 1496309612}
   m_Layer: 0
   m_Name: Rock01
   m_TagString: Untagged
@@ -6335,7 +6739,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -6391,6 +6795,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1496309607}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1496309612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496309607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207d960e86645a84ab85cf70cfe8131b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 223581101}
+  playerAnim: {fileID: 910342117}
+  collisionFX: {fileID: 1383803493}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 1573089658}
 --- !u!1001 &1505734562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6771,6 +7192,7 @@ GameObject:
   - component: {fileID: 1560360687}
   - component: {fileID: 1560360686}
   - component: {fileID: 1560360685}
+  - component: {fileID: 1560360688}
   m_Layer: 0
   m_Name: Rock01 (1)
   m_TagString: Untagged
@@ -6809,7 +7231,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -6865,6 +7287,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1560360683}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1560360688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560360683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207d960e86645a84ab85cf70cfe8131b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 223581101}
+  playerAnim: {fileID: 910342117}
+  collisionFX: {fileID: 1383803493}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 1573089658}
 --- !u!1001 &1560611389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7075,6 +7514,7 @@ GameObject:
   - component: {fileID: 1565962939}
   - component: {fileID: 1565962938}
   - component: {fileID: 1565962937}
+  - component: {fileID: 1565962940}
   m_Layer: 0
   m_Name: Rock01
   m_TagString: Untagged
@@ -7113,7 +7553,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -7169,6 +7609,117 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565962935}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1565962940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565962935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207d960e86645a84ab85cf70cfe8131b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 223581101}
+  playerAnim: {fileID: 910342117}
+  collisionFX: {fileID: 1383803493}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 1573089658}
+--- !u!1 &1573089658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1573089659}
+  - component: {fileID: 1573089662}
+  - component: {fileID: 1573089661}
+  - component: {fileID: 1573089660}
+  m_Layer: 5
+  m_Name: FadeOut
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1573089659
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573089658}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 311545663}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1573089660
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573089658}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b2e1d7255690a554b92c449edfd6f0b4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1573089661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573089658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 0}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1573089662
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573089658}
+  m_CullTransparentMesh: 1
 --- !u!1 &1584164735
 GameObject:
   m_ObjectHideFlags: 0
@@ -7309,7 +7860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4483830403358642, guid: 74442f407a24ac84f95f08a83b1bb617, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.51
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4483830403358642, guid: 74442f407a24ac84f95f08a83b1bb617, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8059,6 +8610,7 @@ GameObject:
   - component: {fileID: 1767283100}
   - component: {fileID: 1767283099}
   - component: {fileID: 1767283098}
+  - component: {fileID: 1767283101}
   m_Layer: 0
   m_Name: Tree02
   m_TagString: Untagged
@@ -8097,7 +8649,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -8153,6 +8705,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767283096}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1767283101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767283096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207d960e86645a84ab85cf70cfe8131b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 223581101}
+  playerAnim: {fileID: 910342117}
+  collisionFX: {fileID: 1383803493}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 1573089658}
 --- !u!4 &1769854719 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4137486168269956, guid: da41fd2967a439d409358c2214a5409e, type: 3}
@@ -8735,6 +9304,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 765365877}
+  - {fileID: 1383803492}
   m_Father: {fileID: 1720155347}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1946951873
@@ -9447,6 +10017,7 @@ GameObject:
   - component: {fileID: 2073334023}
   - component: {fileID: 2073334022}
   - component: {fileID: 2073334021}
+  - component: {fileID: 2073334024}
   m_Layer: 0
   m_Name: Tree02
   m_TagString: Untagged
@@ -9463,7 +10034,7 @@ Transform:
   m_GameObject: {fileID: 2073334019}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.65, y: 1.7289, z: 4.632308}
+  m_LocalPosition: {x: -0.51, y: 1.7289, z: 11.4}
   m_LocalScale: {x: 1, y: 2.4379, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9485,7 +10056,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -9541,6 +10112,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073334019}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2073334024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073334019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207d960e86645a84ab85cf70cfe8131b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 223581101}
+  playerAnim: {fileID: 910342117}
+  collisionFX: {fileID: 1383803493}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 1573089658}
 --- !u!4 &2075638388 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4905684144481780, guid: dc00aab85b301f242896a77c4b442ec0, type: 3}
