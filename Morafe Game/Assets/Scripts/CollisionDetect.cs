@@ -12,14 +12,14 @@ public class CollisionDetect : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        collisionFX.Play();
-        player.GetComponent<PlayerMovement>().enabled = false;
-        playerAnim.GetComponent<Animator>().Play("Stuble Backwards");
+        StartCoroutine(CollisionEnd());
     }
 
     IEnumerator CollisionEnd()
     {
-        
+        collisionFX.Play();
+        player.GetComponent<PlayerMovement>().enabled = false;
+        playerAnim.GetComponent<Animator>().Play("Stuble Backwards");
         yield return new WaitForSeconds(3);
         fadeOut.SetActive(true);
     }
